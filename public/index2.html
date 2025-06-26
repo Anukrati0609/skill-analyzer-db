@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skill Roadmap & YouTube Recommender</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="search-container">
+      <input type="text" class="search-input" id="skill-input" placeholder="What would you like to learn today?" />
+      <i class="fas fa-search search-icon" onclick="handleSubmit()"></i>
+
+      <!-- Filter options -->
+      <div class="filter-options" id="filter-options" style="display: none;">
+        <div class="filter-group">
+          <label class="filter-label">Video Length:</label>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">
+              <i class="fas fa-list"></i> All Videos
+            </button>
+            <button class="filter-btn" data-filter="long" onclick="setFilter('long')">
+              <i class="fas fa-clock"></i> Long (60+ min)
+            </button>
+            <button class="filter-btn" data-filter="short" onclick="setFilter('short')">
+              <i class="fas fa-stopwatch"></i> Short (&lt;60 min)
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-section">
+      <div class="profile-avatar">AI</div>
+      <span class="profile-name">Skill Learning Assistant</span>
+      <i class="fas fa-cog settings-icon"></i>
+    </div>
+  </div>
+
+  <div class="results-container" id="results-container" style="display: none;"></div>
+
+  <script src="script2.js"></script>
+</body>
+
+</html>
